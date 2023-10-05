@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <title>Результати</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Результати</h2>
+        <div id="resultContainer"></div>
+    </div>
+
+    <script>
+        // Отримуємо параметр "result" з URL
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var result = urlParams.get("result");
+
+        // Виводимо результат на сторінку
+        document.getElementById("resultContainer").innerHTML = result;
+    </script>
+</body>
+</html>
